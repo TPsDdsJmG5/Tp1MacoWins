@@ -2,8 +2,7 @@ package ar.edu.grupo5.jm.dss.macoWins;
 
 public class Nacional implements Procedencia {
 
-	@Override
-	public float factorMultiplicativo() {
+	public double factorMultiplicativo() {
 		return 1;
 	}
 	

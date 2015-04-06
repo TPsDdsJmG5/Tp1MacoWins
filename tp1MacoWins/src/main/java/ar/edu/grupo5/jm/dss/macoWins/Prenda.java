@@ -11,12 +11,18 @@ public class Prenda {
 		precioBase = unPrecioBase;
 		procedencia = unaProcedencia;
 	}
-	
-	public float precioFinalEn(Negocio unNegocio) {
-		return (unNegocio.getValorFijo()+precioBase)*procedencia.factorMultiplicativo();
+
+	public float getPrecioBase() {
+		return precioBase;
 	}
-	
 	public String getNombre() {
 		return nombre;
+	}
+	public Procedencia getProcedencia() {
+		return procedencia;
+	}
+
+	public double precioFinalEn(Negocio unNegocio){
+		return (unNegocio.getValorFijo() + getPrecioBase()) * getProcedencia().factorMultiplicativo();
 	}
 }
