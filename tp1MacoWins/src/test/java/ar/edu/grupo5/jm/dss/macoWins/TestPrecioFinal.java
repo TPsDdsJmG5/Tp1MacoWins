@@ -1,10 +1,6 @@
 package ar.edu.grupo5.jm.dss.macoWins;
 
 import static org.junit.Assert.*;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 import org.junit.Test;
 
 public class TestPrecioFinal {
@@ -12,8 +8,6 @@ public class TestPrecioFinal {
 	Prenda jean2 = new Prenda("Jeans Wronglord",400,new Internacional());
 	Prenda camisa = new Prenda("Camisa Lovis",300,new Nacional());
 	Prenda saco = new Prenda("Saco",500,new Internacional());
-	
-	DateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
 	
 	Negocio negocio = new Negocio(100);
 	
