@@ -16,10 +16,6 @@ public class Prenda {
 		return (unNegocio.getValorFijo()+precioBase)*procedencia.factorMultiplicativo();
 	}
 	
-	public void setNombre(String unNombre) {
-		nombre=unNombre;
-	}
-	
 	public String getNombre() {
 		return nombre;
 	}
