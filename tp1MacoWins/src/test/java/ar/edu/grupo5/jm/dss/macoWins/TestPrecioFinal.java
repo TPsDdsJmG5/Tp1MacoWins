@@ -14,7 +14,7 @@ public class TestPrecioFinal {
 	@Test
 	public void test() {
 		
-		assertTrue(jean.precioFinalEn(negocio) == 300);
+		assertTrue(jean.precioFinalEn(negocio) == 400);
 		assertTrue(jean2.precioFinalEn(negocio) == 650);
 		assertTrue(camisa.precioFinalEn(negocio) == 400);
 		assertTrue(saco.precioFinalEn(negocio) == 780);
