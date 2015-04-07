@@ -17,7 +17,7 @@ public class Negocio {
 	public double getValorFijo() {
 		return valorFijo;
 	}
-	
+	 
 	public double gananciaEn(LocalDate unaFecha){
 		return listadoGananciasEn(unaFecha).sum();
 	}
@@ -27,7 +27,7 @@ public class Negocio {
 	private DoubleStream listadoGananciasEn(LocalDate unaFecha){
 		return ventasEn(unaFecha).mapToDouble(unaVenta -> unaVenta.gananciaEn(this));
 	}
-	public void realizarVenta(Prenda unaPrenda,int unaCantidad) {
-		ventas.add(new Venta(unaPrenda,unaCantidad,LocalDate.now()));
+	public void realizarVenta(Prenda unaPrenda,int unaCantidad,LocalDate unaFecha) {
+		ventas.add(new Venta(unaPrenda,unaCantidad,unaFecha));
 	}
 }
