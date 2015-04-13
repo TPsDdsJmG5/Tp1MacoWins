@@ -2,21 +2,24 @@ package ar.edu.grupo5.jm.dss.macoWins;
 
 public class Prenda {
 
+	private string marca;
 	private String nombre;
-	private double precioBase;
 	private Procedencia procedencia;
 	
-	public Prenda(String unNombre, double unPrecioBase, Procedencia unaProcedencia) {
+	public Prenda(String unNombre, Procedencia unaProcedencia, Marca unaMarca) {
 		nombre = unNombre;
-		precioBase = unPrecioBase;
 		procedencia = unaProcedencia;
+		marca = unaMarca;
 	}
 
 	public String getNombre() {
 		return nombre;
 	}
-
+	
+	public double precioOriginalEn(Negocio unNegocio){
+		return (unNegocio.getValorFijo() + this.precioBase()) * procedencia.factorMultiplicativo();
+	}
 	public double precioFinalEn(Negocio unNegocio){
-		return (unNegocio.getValorFijo() + precioBase) * procedencia.factorMultiplicativo();
+		return  this.precioOriginal(unNegocio) * marca.coeficienteMarca(this.precioOriginal(unNegocio));
 	}
 }
