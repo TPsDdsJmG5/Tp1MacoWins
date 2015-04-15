@@ -24,10 +24,9 @@
 
 <h3> Justificaciones de las decisiones tomadas:</h3>
 
-- *Cambiar de recibir un precio base a travez de un setter a hacerlo por herencia por el tipo (relacionar con extensibilidad y mantenibilidad como pide el enunciado)*
+- En base a las nuevas especificaciones, terminamos decidiendo que implementar la herencia para diferenciar los tipos de prenda, iba a terminar resultando una manera más efectiva, ya que además de agregarse nuevas prendas, se agregaron diferentes comportamientos. Es decir, entendiendo que el motivo de crear nuevas clases es para diferenciar el comportamiento, establecimos una relación de herencia para lograr que  cada prenda a pesar de su comportamiento particular siga manteniendo el comportamiento común (Marcas, y procedencias)
+Además al cambiar esto, nos vimos obligados a modificar como tratábamos el precio base, ya que de un valor fijo, este precio empezó a cambiar según la prenda, es decir, este nuevo comportamiento se agregaba en cómo se obtenía el precio base. Por lo que los valores fijos los diferenciamos según la clase y agregamos el comportamiento indicado. De esta manera modificar algún cálculo, o agregar alguna otra prenda no requeriría un mayor esfuerzo.
 
-- *Implementar el coeficienteMarca por composición*
+- A la hora de implementar el nuevo requerimiento de las marcas, decidimos hacerlo por composición, ya que de esta forma, separamos la marca del tipo de prenda que sea. Además de esta manera modificar la política de una de las marcas, solo constaría de ir a esa clase y solo esa para cambiarlo, lo mismo al agregar una nueva marca, solo habría que crear una nueva clase que implemente la interfaz marca.
 
-- *Dejar el coeficienteProcedencia por composición (Consistencia con el item de arriba (problemas similares => soluciones similares))*
-
-
+- Otro factor para decidir implementar las marcas a través de composición, fue que habíamos hecho lo mismo con procedencia, el cual tiene una problemática similar, por lo que usar composición nos pareció más consistente que otra forma de resolución.
