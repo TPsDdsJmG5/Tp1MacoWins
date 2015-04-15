@@ -8,17 +8,24 @@ import org.junit.Test;
 
 public class TestGananciaPorFecha {
 
-	Prenda pantalon = new Prenda("Jeans Wronglord",300,new Nacional());
-	Prenda pantalon2 = new Prenda("Jeans Wronglord",400,new Internacional());
-	Prenda camisa = new Prenda("Camisa Lovis",300,new Nacional());
-	Prenda saco = new Prenda("Saco Azul",500,new Internacional());
+	Pantalon pantalonFeo = new Pantalon(200, new Nacional(), new Sarkany());
+	Pantalon pantalonNoTanFeo = new Pantalon(220, new Internacional(), new Armani());
+	Camisa camisaLovis = new Camisa(new Nacional(), new Sarkany());
+	Saco sacoAzul = new Saco(15, new Nacional(), new Armani());
+	Zapatos zapatoFino = new Zapatos(40, new Nacional(), new Sarkany());
+	Sombrero galeraLoca = new Sombrero(100.5, new Internacional(), new Armani());
 	
 	Negocio negocio = new Negocio(100);
-	
+		
 	@Test
 	public void test() {
 
-		negocio.realizarVenta(pantalon, 2, LocalDate.parse("2015-04-02"));
-		assertTrue(negocio.gananciaEn(LocalDate.parse("2015-04-02")) == 800);
+		negocio.realizarVenta(pantalonFeo, 2, LocalDate.parse("2015-04-02"));
+		negocio.realizarVenta(camisaLovis, 3, LocalDate.parse("2015-04-02"));
+		negocio.realizarVenta(sacoAzul, 1, LocalDate.parse("2015-04-02"));
+		negocio.realizarVenta(galeraLoca, 5, LocalDate.parse("2015-04-02"));
+		
+		assertTrue(negocio.gananciaEn(LocalDate.parse("2015-04-02")) == 7141.6125 );
+
 	}
 }

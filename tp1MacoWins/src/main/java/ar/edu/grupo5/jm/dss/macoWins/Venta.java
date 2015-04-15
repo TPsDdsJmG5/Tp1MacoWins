@@ -15,7 +15,7 @@ public class Venta {
 	}
 	
 	public double gananciaEn(Negocio unNegocio) {
-		return prenda.precioFinalEn(unNegocio)*cantidad;
+		return (prenda.precioFinalEn(unNegocio) * cantidad);
 	}
 	
 	public boolean esDeFecha(LocalDate unaFecha) {
