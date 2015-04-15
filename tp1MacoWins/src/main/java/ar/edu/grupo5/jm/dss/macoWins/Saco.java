@@ -11,7 +11,7 @@ public class Saco extends Prenda {
 	
 	@Override
 	public double precioBase(){
-		return (300+(10*cantidadBotones));
+		return 300+(10*cantidadBotones);
 	}
 
 }

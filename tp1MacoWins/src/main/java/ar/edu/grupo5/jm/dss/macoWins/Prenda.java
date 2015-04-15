@@ -17,6 +17,6 @@ public abstract class Prenda {
 	}
 	
 	public double precioFinalEn(Negocio unNegocio){
-		return ( precioOriginalEn(unNegocio) * marca.factorMarca(precioOriginalEn(unNegocio)) );
+		return precioOriginalEn(unNegocio) * marca.factorMarca(precioOriginalEn(unNegocio));
 	}
 }

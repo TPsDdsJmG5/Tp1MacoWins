@@ -11,7 +11,7 @@ public class Pantalon extends Prenda {
 	
 	@Override
 	public double precioBase(){
-		return (250+cm2deTela);
+		return 250+cm2deTela;
 	}
 
 }

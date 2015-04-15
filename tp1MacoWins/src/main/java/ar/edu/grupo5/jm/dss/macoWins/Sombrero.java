@@ -7,12 +7,12 @@ public class Sombrero extends Prenda {
 	public Sombrero(double uncoeficienteMetrosexualidad, Procedencia unaProcedencia, Marca unaMarca) {
 		super(unaProcedencia,unaMarca );
 		coeficienteMetrosexualidad = uncoeficienteMetrosexualidad;
-			}
+	}
 
 
 	@Override
 	public double precioBase(){
-		return (150+coeficienteMetrosexualidad);
+		return 150+coeficienteMetrosexualidad;
 	}
 
 }

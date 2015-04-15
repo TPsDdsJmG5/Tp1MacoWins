@@ -11,7 +11,7 @@ private int talle;
 	
 	@Override
 	public double precioBase(){
-		return ( 400 + (5 * talle) );
+		return 400 + (5 * talle);
 	}
 
 }
