@@ -30,3 +30,6 @@ Además al cambiar esto, nos vimos obligados a modificar como tratábamos el pre
 - A la hora de implementar el nuevo requerimiento de las marcas, decidimos hacerlo por composición, ya que de esta forma, separamos la marca del tipo de prenda que sea. Además de esta manera modificar la política de una de las marcas, solo constaría de ir a esa clase y solo esa para cambiarlo, lo mismo al agregar una nueva marca, solo habría que crear una nueva clase que implemente la interfaz marca.
 
 - Otro factor para decidir implementar las marcas a través de composición, fue que habíamos hecho lo mismo con procedencia, el cual tiene una problemática similar, por lo que usar composición nos pareció más consistente que otra forma de resolución.
+
+<h3> Tests
+-Hicimos test unitarios para casi todas las clases y sus metodos, excepto para negocio. En negocio hicimos un test integral que abarca casi todo el TP.
