@@ -17,7 +17,6 @@ public class VentaTest {
 	@Before
 	public void Setup(){
 		zapatito = mock(Zapato.class);
-		negocio = mock(Negocio.class);
 				
 		unaVenta = new Venta (zapatito,5,LocalDate.parse("2015-04-02"));
 	}
