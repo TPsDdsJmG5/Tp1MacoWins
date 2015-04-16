@@ -1,10 +1,10 @@
 package ar.edu.grupo5.jm.dss.macoWins;
 
-public class Zapatos extends Prenda {
+public class Zapato extends Prenda {
 	
 private int talle;
 	
-	public Zapatos(int untalle, Procedencia unaProcedencia, Marca unaMarca) {
+	public Zapato(int untalle, Procedencia unaProcedencia, Marca unaMarca) {
 		super(unaProcedencia,unaMarca );
 		talle = untalle;
 	}
